@@ -1,0 +1,79 @@
+schema:
+- db: rochedc
+  tables:
+  - table: F_Analysis
+    collection: F_Analysis
+    pipeline: []
+    columns:
+    - Name: Load Date
+      MongoType: date
+      SqlName: Load Date
+      SqlType: timestamp
+    - Name: Variant
+      MongoType: string
+      SqlName: Variant
+      SqlType: varchar
+    - Name: Variant Values
+      MongoType: string
+      SqlName: Variant Values
+      SqlType: varchar
+    - Name: Which Chromosome
+      MongoType: string
+      SqlName: Which Chromosome
+      SqlType: varchar
+    - Name: Which Gene
+      MongoType: string
+      SqlName: Which Gene
+      SqlType: varchar
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: varchar
+    - Name: break1
+      MongoType: string
+      SqlName: break1
+      SqlType: varchar
+    - Name: break2
+      MongoType: string
+      SqlName: break2
+      SqlType: varchar
+    - Name: chrom
+      MongoType: string
+      SqlName: chrom
+      SqlType: varchar
+    - Name: chromend
+      MongoType: float64
+      SqlName: chromend
+      SqlType: float64
+    - Name: chromstart
+      MongoType: float64
+      SqlName: chromstart
+      SqlType: float64
+    - Name: dockey
+      MongoType: string
+      SqlName: dockey
+      SqlType: varchar
+    - Name: gene
+      MongoType: string
+      SqlName: gene
+      SqlType: varchar
+    - Name: gene name
+      MongoType: string
+      SqlName: gene name
+      SqlType: varchar
+    - Name: name
+      MongoType: string
+      SqlName: name
+      SqlType: varchar
+    - Name: pos
+      MongoType: float64
+      SqlName: pos
+      SqlType: float64
+    - Name: region1
+      MongoType: string
+      SqlName: region1
+      SqlType: varchar
+    - Name: region2
+      MongoType: string
+      SqlName: region2
+      SqlType: varchar

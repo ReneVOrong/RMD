@@ -1,0 +1,1 @@
+db.getCollection("F_Analysis").createIndex({ "dockey": 1 }, { "name": "dockey" })

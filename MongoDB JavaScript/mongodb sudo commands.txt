@@ -1,0 +1,19 @@
+
+
+sudo nohup /usr/bin/mongosqld --config=/opt/dc/mongo/mongosqld.conf &
+
+sudo /usr/bin/mongosqld --config=/opt/dc/mongo/mongosqld.conf &
+
+
+mongodrdl -h 10.39.39.112 -d rochedc -c F_Analysis -o F_Analysis.drdl
+
+//--- crontab
+
+crontab -e
+
+
+30 02 * * * sh /opt/dc/mongo/etl/ETL_TableauDM.sh
+
+
+
+https://tabnala.roche.com/views/OMAPSP3/Overview?:embed=y&:display_count=no&:showAppBanner=false&:showVizHome=no

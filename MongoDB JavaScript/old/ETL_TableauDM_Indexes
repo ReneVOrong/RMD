@@ -1,0 +1,74 @@
+##!/usr/bin/bash
+
+# |------------------------------------------------------------|
+# | Filename    : MongoDB_ETL_TableauDM.bash                   |
+# | Author      : Rene V Orong                                 |
+# | Date Written: 10 Apr 2018                                  |
+# | Client      : Roche Molecular Diagnostics                  |
+# | Abstract    : Utility                                      |
+# | Description : BASH Shell script - executes JavaScripts to  |
+# |               ETL from dc to TableauDM.                    |
+# |                                                            |
+# | Usage      : ./Mongo_ETL_TableauDM.bash                    |
+# |                                                            |
+# |------------------------------------------------------------|
+# |                  MODIFICATION HISTORY                      |  
+# |------------------------------------------------------------|
+# | Modified By    Date    Ver    Description Of Modification  |
+# | -----------    ----    ---    -----------------------------|
+# | ReneVOrong  10Apr2018  1.0  1. Written.                    |
+# |------------------------------------------------------------|
+
+# |------------------------------------------------------------|
+# |                        FUNCTIONS                           |
+# |------------------------------------------------------------|
+
+cd /opt/dc/mongo/etl
+
+
+# |------------------------------------------------------------|
+# |                        MAIN PROCEDURE                      |
+# |------------------------------------------------------------|
+
+echo " "
+echo "ETL TABLEAU DATA MART COLLECTIONS..."
+echo " "
+
+echo " "
+echo "    Processing D_PTELSA..."
+echo " "
+mongo 10.39.39.112:27017/rochedc "Aggregate dc - D_PTELSA.js"
+
+echo " "
+echo "    Processing F_Analysis..."
+echo " "
+mongo 10.39.39.112:27017/rochedc "Aggregate dc - F_Analysis.js"
+
+echo " "
+echo "    Processing F_Manifest..."
+echo " "
+mongo 10.39.39.112:27017/rochedc "Aggregate dc - F_Manifest.js"
+
+echo " "
+echo "    Processing F_Metrics..."
+echo " "
+mongo 10.39.39.112:27017/rochedc "Aggregate dc - F_Metrics.js"
+
+echo " "
+echo "    Processing F_Performance..."
+echo " "
+mongo 10.39.39.112:27017/rochedc "Aggregate dc - F_Performance.js"
+
+echo " "
+echo "    Creating Indexes all COLLECTIONS..."
+echo " "
+mongo 10.39.39.112:27017/rochedc "Create Indexes.js"
+
+
+echo " "
+echo "END OF ETL SCRIPT, TABLEAU DM COLLECTIONS LOADED..."
+echo " "
+
+# |------------------------------------------------------------|
+# |                        END OF FILE                         |
+# |------------------------------------------------------------|

@@ -1,0 +1,5 @@
+Variant,Header
+cnv,_h cnv:#chrom|chromStart|chromEnd|name|score(p-value)
+fusion,_h fusion:est_type|region1|region2|break1|break2|break_support1|break_support2|break_offset|orientation|order1|order2|break_depth|proper_pair_support|unmapped_support|paired_end_depth|total_depth|fusion_seq|nontemplated_seq
+indels,_h indels:Chrom|Pos|id|ref|alt|qual|filter|dp|altdp|af|af2|af3|whitelist|indel|ss|sid|score1|score2|score3|mmpm|gene|transcript|cdna|aacid|format|LOD_pool_03_cfDNA_spikein_mix1_panel2_rep2|format
+snv,_h snv:Chrom|Pos|id|ref|alt|qual|filter|dp|altdp|mmpm|dp2|altdp2|af|nged|whitelist|ss|sid|score1|score2|indel|smid|smaf|exac_af|tcga_count|dbsnp_af|cosmic_site_count|dbsnp_common|dbsnp_id|cosmic_count|cosmic_site_count_somatic|kg_af|tcga_types|gene_name|gene_id|germline|somatic|format
